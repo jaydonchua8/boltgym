@@ -1,0 +1,398 @@
+{
+ "tasks": 500,
+ "agents": {
+  "random": {
+   "success": 0.0,
+   "median_steps": 6.0,
+   "max_steps": 9,
+   "by_skill": {
+    "clearance": 0.0,
+    "transfer": 0.0
+   }
+  },
+  "copy source coordinates": {
+   "success": 0.144,
+   "median_steps": 6.0,
+   "max_steps": 9,
+   "by_skill": {
+    "clearance": 0.0,
+    "transfer": 0.28346456692913385
+   }
+  },
+  "reward-only search, sparse reward": {
+   "success": 0.144,
+   "median_steps": 666.0,
+   "max_steps": 1097,
+   "by_skill": {
+    "clearance": 0.0,
+    "transfer": 0.28346456692913385
+   }
+  },
+  "reward-only search, dense reward": {
+   "success": 0.926,
+   "median_steps": 671.0,
+   "max_steps": 1352,
+   "by_skill": {
+    "clearance": 0.9105691056910569,
+    "transfer": 0.9409448818897638
+   }
+  },
+  "scripted geometry": {
+   "success": 1.0,
+   "median_steps": 6.0,
+   "max_steps": 9,
+   "by_skill": {
+    "clearance": 1.0,
+    "transfer": 1.0
+   }
+  }
+ },
+ "bandit": {
+  "train_episodes": 2000,
+  "curve_per_100": [
+   0.62,
+   0.7,
+   0.92,
+   0.92,
+   0.95,
+   0.92,
+   0.9,
+   0.91,
+   0.93,
+   0.93,
+   0.92,
+   0.92,
+   0.9,
+   0.94,
+   0.95,
+   0.94,
+   0.96,
+   0.89,
+   0.94,
+   0.93
+  ],
+  "first_block_at_95": 5,
+  "held_out_success": 1.0,
+  "contexts": 8,
+  "actions": 8
+ },
+ "matcher": {
+  "trials": 5000,
+  "greedy_lower": 0.2692,
+  "mean_gap_when_lower": 0.04181128953733514,
+  "max_gap": 0.2260561606566167,
+  "success_flips": 0
+ },
+ "verify_microseconds": 169.1,
+ "scad": {
+  "tasks_per_split": 60,
+  "mutants_per_split": 400,
+  "splits": {
+   "dev": {
+    "profile": "default",
+    "first_seed": 0,
+    "writers": {
+     "paste source coordinates": {
+      "default_check": 0.2,
+      "with_slider_sweep": 0.2
+     },
+     "correct numbers, hardcoded": {
+      "default_check": 1.0,
+      "with_slider_sweep": 0.31666666666666665
+     },
+     "parametric": {
+      "default_check": 1.0,
+      "with_slider_sweep": 1.0
+     }
+    },
+    "defect_table": {
+     "correct_answers": 180,
+     "false_rejects": 0,
+     "defects": {
+      "paste_source": {
+       "n": 123,
+       "default_check": 123,
+       "with_slider_sweep": 123,
+       "stages": {
+        "default": 123
+       }
+      },
+      "wrong_corner": {
+       "n": 180,
+       "default_check": 180,
+       "with_slider_sweep": 180,
+       "stages": {
+        "default": 180
+       }
+      },
+      "radius_as_diameter": {
+       "n": 180,
+       "default_check": 180,
+       "with_slider_sweep": 180,
+       "stages": {
+        "default": 180
+       }
+      },
+      "blind_hole": {
+       "n": 180,
+       "default_check": 180,
+       "with_slider_sweep": 180,
+       "stages": {
+        "default": 180
+       }
+      },
+      "missing_hole": {
+       "n": 180,
+       "default_check": 180,
+       "with_slider_sweep": 180,
+       "stages": {
+        "default": 180
+       }
+      },
+      "duplicate_hole": {
+       "n": 180,
+       "default_check": 180,
+       "with_slider_sweep": 180,
+       "stages": {
+        "default": 180
+       }
+      },
+      "tapped_size": {
+       "n": 78,
+       "default_check": 78,
+       "with_slider_sweep": 78,
+       "stages": {
+        "default": 78
+       }
+      },
+      "syntax_error": {
+       "n": 180,
+       "default_check": 180,
+       "with_slider_sweep": 180,
+       "stages": {
+        "parse": 180
+       }
+      },
+      "undefined_module": {
+       "n": 180,
+       "default_check": 180,
+       "with_slider_sweep": 180,
+       "stages": {
+        "parse": 180
+       }
+      },
+      "removed_parameter": {
+       "n": 180,
+       "default_check": 180,
+       "with_slider_sweep": 180,
+       "stages": {
+        "params": 180
+       }
+      },
+      "literal_coords": {
+       "n": 123,
+       "default_check": 0,
+       "with_slider_sweep": 123,
+       "stages": {
+        "sweep": 123
+       }
+      },
+      "one_axis_literal": {
+       "n": 123,
+       "default_check": 0,
+       "with_slider_sweep": 123,
+       "stages": {
+        "sweep": 123
+       }
+      },
+      "proportional": {
+       "n": 180,
+       "default_check": 0,
+       "with_slider_sweep": 180,
+       "stages": {
+        "sweep": 180
+       }
+      },
+      "literal_depth": {
+       "n": 180,
+       "default_check": 0,
+       "with_slider_sweep": 180,
+       "stages": {
+        "sweep": 180
+       }
+      }
+     }
+    },
+    "mutants": {
+     "mutants": 400,
+     "wrong": 336,
+     "wrong_only_when_resized": 70,
+     "caught_by_1_sizes": 70,
+     "caught_by_2_sizes": 70,
+     "caught_by_3_sizes": 70,
+     "caught_without_thickness": 45,
+     "wrong_at_default": 266,
+     "harmless": 64,
+     "harmless_rejected": 0
+    }
+   },
+   "held-out": {
+    "profile": "heldout",
+    "first_seed": 900000,
+    "writers": {
+     "paste source coordinates": {
+      "default_check": 0.16666666666666666,
+      "with_slider_sweep": 0.16666666666666666
+     },
+     "correct numbers, hardcoded": {
+      "default_check": 1.0,
+      "with_slider_sweep": 0.31666666666666665
+     },
+     "parametric": {
+      "default_check": 1.0,
+      "with_slider_sweep": 1.0
+     }
+    },
+    "defect_table": {
+     "correct_answers": 180,
+     "false_rejects": 0,
+     "defects": {
+      "paste_source": {
+       "n": 123,
+       "default_check": 123,
+       "with_slider_sweep": 123,
+       "stages": {
+        "default": 123
+       }
+      },
+      "wrong_corner": {
+       "n": 180,
+       "default_check": 180,
+       "with_slider_sweep": 180,
+       "stages": {
+        "default": 180
+       }
+      },
+      "radius_as_diameter": {
+       "n": 180,
+       "default_check": 180,
+       "with_slider_sweep": 180,
+       "stages": {
+        "default": 180
+       }
+      },
+      "blind_hole": {
+       "n": 180,
+       "default_check": 180,
+       "with_slider_sweep": 180,
+       "stages": {
+        "default": 180
+       }
+      },
+      "missing_hole": {
+       "n": 180,
+       "default_check": 180,
+       "with_slider_sweep": 180,
+       "stages": {
+        "default": 180
+       }
+      },
+      "duplicate_hole": {
+       "n": 180,
+       "default_check": 180,
+       "with_slider_sweep": 180,
+       "stages": {
+        "default": 180
+       }
+      },
+      "tapped_size": {
+       "n": 75,
+       "default_check": 75,
+       "with_slider_sweep": 75,
+       "stages": {
+        "default": 75
+       }
+      },
+      "syntax_error": {
+       "n": 180,
+       "default_check": 180,
+       "with_slider_sweep": 180,
+       "stages": {
+        "parse": 180
+       }
+      },
+      "undefined_module": {
+       "n": 180,
+       "default_check": 180,
+       "with_slider_sweep": 180,
+       "stages": {
+        "parse": 180
+       }
+      },
+      "removed_parameter": {
+       "n": 180,
+       "default_check": 180,
+       "with_slider_sweep": 180,
+       "stages": {
+        "params": 180
+       }
+      },
+      "literal_coords": {
+       "n": 123,
+       "default_check": 0,
+       "with_slider_sweep": 123,
+       "stages": {
+        "sweep": 123
+       }
+      },
+      "one_axis_literal": {
+       "n": 123,
+       "default_check": 0,
+       "with_slider_sweep": 123,
+       "stages": {
+        "sweep": 123
+       }
+      },
+      "proportional": {
+       "n": 180,
+       "default_check": 0,
+       "with_slider_sweep": 180,
+       "stages": {
+        "sweep": 180
+       }
+      },
+      "literal_depth": {
+       "n": 180,
+       "default_check": 0,
+       "with_slider_sweep": 180,
+       "stages": {
+        "sweep": 180
+       }
+      }
+     }
+    },
+    "mutants": {
+     "mutants": 400,
+     "harmless": 67,
+     "harmless_rejected": 0,
+     "wrong": 333,
+     "wrong_only_when_resized": 77,
+     "caught_by_1_sizes": 77,
+     "caught_by_2_sizes": 77,
+     "caught_by_3_sizes": 77,
+     "caught_without_thickness": 48,
+     "wrong_at_default": 256
+    }
+   }
+  },
+  "verify_scad_ms": 13.39,
+  "cadam_benchmarks": {
+   "files": 13,
+   "parsed": 13,
+   "evaluated": 0,
+   "control_counts_match": 13,
+   "parameters": 179,
+   "lines": 1822
+  }
+ }
+}
